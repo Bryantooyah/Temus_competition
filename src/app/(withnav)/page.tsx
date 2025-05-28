@@ -21,9 +21,11 @@ function CatalogPage() {
                   >
                     <p className="text-xl font-medium mb-2 text-gray-800">{title}</p>
                     <p className="text-sm text-gray-600 line-height-3">{description}</p>
+
                     <div className="mt-2 flex align-items-center gap-2">
                       <i className={`pi pi-volume-up text-sm`}></i>
                       <span className="text-sm">Audio Chat</span>
+
                     </div>
                   </Link>
                 </div>
