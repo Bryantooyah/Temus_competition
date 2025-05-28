@@ -50,7 +50,7 @@ function Conversation(props: ConversationProps) {
   useEffect(() => {
     if (!outputAudioTrack) return;
     let stopped = false;
-    const apiKey = process.env.NEXT_GMAPS_API_KEY; 
+    const apiKey = process.env.NEXT_ASSEMBLY_API_KEY; 
 
     const stream = new MediaStream([outputAudioTrack]);
 
@@ -276,7 +276,7 @@ function Conversation(props: ConversationProps) {
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyAKrNJmp5VoPmgRomcQoEZp1a_V2b6HPJk&origin=Upper+Changi&destination=Tampines+Singapore`}
+          src={`https://www.google.com/maps/embed/v1/directions?key=${process.env.NEXT_MAPS_API_KEY}&origin=Upper+Changi&destination=Tampines+Singapore`}
         />
       </div>
       <div
@@ -300,7 +300,7 @@ function Conversation(props: ConversationProps) {
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/search?key=AIzaSyAKrNJmp5VoPmgRomcQoEZp1a_V2b6HPJk&q=famous+cafe+Upper+Changi`}
+          src={`https://www.google.com/maps/embed/v1/search?key=${process.env.NEXT_MAPS_API_KEY}&q=famous+cafe+Upper+Changi`}
         />
       </div>
       {text && (
